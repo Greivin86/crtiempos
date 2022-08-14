@@ -1,3 +1,4 @@
+import Apuesta from '../models/Apuesta.js'
 const loginform = (req, res) => {
     res.render('loginform', { title: 'Login Form', user: req.session.user });;
 }

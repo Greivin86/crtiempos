@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\controller",
+    "\\databases",
+    "\\models"
   ],
-  "SelectedNode": "\\app.js",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
