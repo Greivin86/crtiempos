@@ -5,26 +5,14 @@ import MongoStore from "connect-mongo";
 import bodyParser from "body-parser";
 import session from 'express-session';
 import router from './routes/index.js'
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+
 
 //init
 const app = express();
 
 //settings
 app.set("port", PORT);
-const firebaseConfig = {
-    apiKey: "AIzaSyBjOhwX_PmqK8WSz00tYDbUwOQFttH3F0M",
-    authDomain: "crtimes.firebaseapp.com",
-    projectId: "crtimes",
-    storageBucket: "crtimes.appspot.com",
-    messagingSenderId: "79105539476",
-    appId: "1:79105539476:web:ea91181439fe75e50ce381",
-    measurementId: "G-J016G00ESY"
-};
 
-// Initialize Firebase
-const firebase = initializeApp(firebaseConfig);
 
 
 //middlewares
