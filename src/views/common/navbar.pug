@@ -1,0 +1,18 @@
+mixin navbar(navbar)
+    nav.navbar-dark.bg-dark.text-white
+        ul.row
+            .col.d-flex.justify-content-start
+                li.list-group-item.m-2
+                    a.nav-link(href='/') Home
+                if !user
+                    li.list-group-item.m-2
+                        a.nav-link(href='/loginform') Log In
+                if user
+                    li.list-group-item.m-2
+                        a.nav-link(href='/apuestas') Apuestas
+            .col.d-flex.justify-content-end
+                if user
+                    li.list-group-item.m-2
+                        p Logged as #{user}
+                        a.nav-link.d-block(href='/logout') Log Out    
+            

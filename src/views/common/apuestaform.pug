@@ -1,0 +1,15 @@
+mixin apuestaform(apuestaform)
+    form.d-flex.text-center.justify-content-center(method="post" action="/addapuesta")
+        .form-row.align-items-center
+            .d-block
+                label.sr-only(for="apuestaNumero" ) Numero
+                input.form-control(type="number" min=0 max=99 name="apuestaNumero" required autofocus)
+            .d-block
+                label.sr-only(for="apuestaMonto") Monto
+                input.form-control(type="number" min=50 max=10000 name="apuestaMonto" required)
+            .d-block
+                label.sr-only(for="apuestaReventado") Reventado
+                input.form-control(type="number" min=0 max=10000 name="apuestaReventado" required)
+            .d-block
+                input.form-control.mt-3(type="submit" name="submit"  value="Submit")
+        

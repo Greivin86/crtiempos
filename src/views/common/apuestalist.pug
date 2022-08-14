@@ -1,0 +1,24 @@
+mixin apuestalist(apuestalista)
+    if apuestaLista
+        .row.text-center.mt-5
+            h3.col numero
+            h3.col monto
+            h3.col Reventado
+            h4.col Borrar
+        each val in apuestaLista
+            .row.text-center
+                h4.col #{val.apuestaNumero}
+                h4.col #{val.apuestaMonto}
+                h4.col #{val.apuestaReventado}
+                form.col(action='/delapuesta/' + val._id  method='GET')
+                    //input(type='hidden' name='_method' value='DELETE')
+                    input(type='submit' name='submit' value='DELETE')
+        form(method="post" action="/procesalista")
+            .d-flex.justify-content-center
+                select
+                    option(value='Tica Dia') Tica Dia
+                    option(value='Tica Noche') Tica Noche
+                    option(value='Nica Dia') Nica Dia
+                    option(value='Nica Noche') Nica Noche
+                input(type="submit" name="submit"  value="Procesar")
+                

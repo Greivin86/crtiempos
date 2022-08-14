@@ -1,0 +1,6 @@
+mixin login(login)
+    .d-flex.justify-content-center
+        form.row(method='POST', action='/login', autocomplete='off')
+            input.col(type='text',placeholder='User',name='user' required)
+            input.col(type='text',placeholder='Password',name='pass' required)
+            input.col(type='submit', name='submit', value='Submit')
