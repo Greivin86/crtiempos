@@ -2,12 +2,12 @@ import app from './app.js';
 
 import { connectDB } from "./databases/mongoapuestas.js";
 
+const port = process.env.PORT || 3000
+
 async function main() {
     await connectDB();
-    app.listen(app.get("port"));
+    app.listen(port, () => console.log(`app listening on port ${port}!`))
 
-    console.log("Server on port", app.get("port"));
-    console.log("Environment:", process.env.NODE_ENV);
 }
 
 main();
