@@ -11,7 +11,7 @@ import router from './routes/index.js'
 const app = express();
 
 //settings
-app.set("port", PORT);
+app.set("port", process.env.PORT || 3000);
 
 
 

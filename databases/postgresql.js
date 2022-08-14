@@ -15,5 +15,6 @@ function conectar() {
     });
 }
 
+//agregar un nombre mas descriptivo
 export default conectar
 
