@@ -9,11 +9,11 @@ import {
     auth,
     apuestas,
 } from '../controller/app.controller.js';
-/*import {
+import {
     addapuesta,
     delapuesta,
     procesalista,
-} from '../controller/mongodb.controller.js';*/
+} from '../controller/mongodb.controller.js';
 
 //routes
 router.get('/', home)
@@ -24,11 +24,11 @@ router.get('/logout', logout)
 
 router.post('/login', login)
 
-//router.post('/addapuesta' , addapuesta)
+router.post('/addapuesta' , addapuesta)
 
-//router.get('/delapuesta/:_id' , delapuesta)
+router.get('/delapuesta/:_id' , delapuesta)
 
-//router.post('/procesalista',procesalista)
+router.post('/procesalista',procesalista)
 
 router.get('/apuestas', auth, apuestas)
 

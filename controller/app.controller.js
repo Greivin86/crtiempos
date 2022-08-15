@@ -25,7 +25,7 @@ const home = (req, res) => {
 }
 const apuestas = async (req, res) => {
     const apuestaLista = await Apuesta.find();
-    res.render('apuestas', { title: 'Apuestas', user: req.session.user, /*apuestaLista*/});
+    res.render('apuestas', { title: 'Apuestas', user: req.session.user, apuestaLista});
     
 }
 
