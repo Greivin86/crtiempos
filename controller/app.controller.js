@@ -1,6 +1,8 @@
 import Apuesta from '../models/Apuesta.js'
+import { pgpool } from '../databases/postgresconnection.js'
+
 const loginform = (req, res) => {
-    res.render('loginform', { title: 'Login Form', user: req.session.user });;
+    res.render('loginform', { title: 'Login Form' });;
 }
 const logout = (req, res) => {
     req.session.destroy();
@@ -9,10 +11,26 @@ const logout = (req, res) => {
 const login = async(req, res) => {
     if (req.body.user && req.body.pass) {
         req.session.user = req.body.user;
+        req.session.password = req.body.pass;
+        const query = `SELECT * 
+                   FROM vendedores
+                   WHERE vendedor = 'Admin' and password = 4dm1n`;
+        try {
+            pgpool.connect();
+            const { rows } = await pgpool.query(query); // sends queries
+            console.log(rows)
+            /*if (rows.lenght == 0) {
+                res.render('loginform', { title: 'Login Form' });
+            } else { res.render('home', { title: 'Home', user: req.session.user }); }*/
+        } catch (error) {
+            console.error(error.stack);
+        }finally {
+            await pgpool.end(); // closes connection
+        }
         await Apuesta.db.dropDatabase();
         res.render('home', { title: 'Home', user: req.session.user });
     }else  {
-        res.send('Error');
+        res.render('loginform', { title: 'Login Form'});
     }
 }
 const auth = (req, res, next) => {
