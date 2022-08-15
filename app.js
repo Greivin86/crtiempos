@@ -5,7 +5,7 @@ import MongoStore from "connect-mongo";
 import bodyParser from "body-parser";
 import session from 'express-session';
 import router from './routes/index.js'
-
+import path from 'path'
 
 //init
 const app = express();
