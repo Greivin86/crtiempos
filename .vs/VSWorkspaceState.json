@@ -4,8 +4,10 @@
     "\\controller",
     "\\databases",
     "\\models",
-    "\\routes"
+    "\\routes",
+    "\\views",
+    "\\views\\common"
   ],
-  "SelectedNode": "\\index.js",
+  "SelectedNode": "\\databases\\dbconfig.js",
   "PreviewInSolutionExplorer": false
 }
