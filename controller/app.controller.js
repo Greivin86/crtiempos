@@ -1,6 +1,6 @@
 import Apuesta from '../models/Apuesta.js'
 const loginform = (req, res) => {
-    res.render('loginform', { title: 'Login Form', /*user: req.session.user*/ });;
+    res.render('loginform', { title: 'Login Form', user: req.session.user });;
 }
 const logout = (req, res) => {
     req.session.destroy();
