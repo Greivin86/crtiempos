@@ -1,7 +1,8 @@
 import express from "express";
 import methodOverride from "method-override";
-//import { MONGODB_URI, PORT } from "./databases/mongoconfig.js";
+import { MONGODB_URI, PORT } from "./databases/mongoconfig.js";
 import bodyParser from "body-parser";
+import MongoStore from "connect-mongo";
 import session from 'express-session';
 import router from './routes/index.js'
 
