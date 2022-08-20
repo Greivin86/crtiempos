@@ -5,15 +5,19 @@ import {
     home,
     loginform,
     logout,
-    login,
     auth,
-    apuestas,
 } from '../controller/app.controller.js';
 import {
+    apuestas,
     addapuesta,
     delapuesta,
-    procesalista,
 } from '../controller/mongodb.controller.js';
+
+import {
+    login,
+    procesalista
+} from '../controller/postgresdb.controller.js';
+
 
 //routes
 router.get('/', home)

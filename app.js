@@ -4,14 +4,12 @@ import { MONGODB_URI } from "./databases/dbconfig.js";
 import bodyParser from "body-parser";
 import MongoStore from "connect-mongo";
 import session from 'express-session';
-import router from './routes/index.js'
-
+import router from './routes/index.js';
 //init
 const app = express();
 
 //settings
 app.set("port", process.env.PORT || 3000);
-
 
 
 //middlewares

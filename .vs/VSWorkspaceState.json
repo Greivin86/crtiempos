@@ -3,11 +3,11 @@
     "",
     "\\controller",
     "\\databases",
-    "\\models",
+    "\\public",
     "\\routes",
     "\\views",
     "\\views\\common"
   ],
-  "SelectedNode": "\\databases\\dbconfig.js",
+  "SelectedNode": "\\app.js",
   "PreviewInSolutionExplorer": false
 }

@@ -10,6 +10,9 @@ mixin navbar(navbar)
                 if user
                     li.list-group-item.m-2
                         a.nav-link(href='/apuestas') Apuestas
+                if user
+                    li.list-group-item.m-2
+                        a.nav-link(href='#') Ganadores
             .col.d-flex.justify-content-end
                 if user
                     li.list-group-item.m-2

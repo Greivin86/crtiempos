@@ -11,11 +11,7 @@ const addapuesta = async (req, res) => {
         res.send('Error');
     }
 };
-const procesalista = async (req, res) => {
-    //aqui se meten los datos a SQL
-    await Apuesta.db.dropDatabase();
-    res.render('apuestas', { user: req.session.user })
-}
+
 
 
 const delapuesta = async (req, res) => {
@@ -25,9 +21,14 @@ const delapuesta = async (req, res) => {
     console.log(apuestaLista)
     res.render('apuestas', { title: 'Apuestas', user: req.session.user, apuestaLista });
 }
+const apuestas = async (req, res) => {
+    const apuestaLista = await Apuesta.find();
+    res.render('apuestas', { title: 'Apuestas', user: req.session.user, apuestaLista });
+
+}
 
 export {
     addapuesta,
     delapuesta,
-    procesalista,
+    apuestas,
 }
