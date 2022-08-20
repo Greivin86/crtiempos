@@ -4,6 +4,9 @@ const { Pool } = pg.default
 
 export const pgPool = new Pool({
     connectionString: POSTGRES_URI,
+    ssl: {
+        rejectUnauthorized: false
+    }
 })
 
 export const connectPostgresDB = async () => {
